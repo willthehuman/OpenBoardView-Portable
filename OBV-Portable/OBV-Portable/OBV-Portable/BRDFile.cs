@@ -8,7 +8,7 @@ using Xamarin.Forms.Shapes;
 
 namespace OBV
 {
-    internal class BRDFile
+    internal class BRDFile : BRDFileBase
     {
         static readonly Byte[] BRD_FILE_HEADER = { 0x23, 0xe2, 0x63, 0x28 };
         public BRDFile(Stream buffer)
@@ -98,6 +98,45 @@ namespace OBV
                 {
                     currentBlock = 6;
                     continue;
+                }
+
+                string p = test;
+                string s;
+
+                uint tmp = 0;
+
+                switch (currentBlock)
+                {
+                    case 2:
+                        // var_data
+                        {
+                            
+                        }
+                        break;
+                    case 3:
+                        // Format
+                        {
+
+                        }
+                        break;
+                    case 4:
+                        // Parts
+                        {
+                            
+                        }
+                        break;
+                    case 5:
+                        // Pins
+                        {
+                            
+                        }
+                        break;
+                    case 6:
+                        // Nails
+                        {
+                            
+                        }
+                        break;
                 }
             }
         }
